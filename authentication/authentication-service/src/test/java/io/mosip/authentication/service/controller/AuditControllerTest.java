@@ -33,7 +33,7 @@ public class AuditControllerTest {
     private AuditService auditService;
 
     @Test
-    @Ignore("Revisit error")
+//    @Ignore("Revisit error")
     public void testAudit_Success() throws Exception {
         AuditResponse response = new AuditResponse();
         response.setEventId("123");

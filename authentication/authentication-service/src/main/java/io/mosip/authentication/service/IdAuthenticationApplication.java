@@ -128,7 +128,7 @@ import io.mosip.kernel.keymanager.hsm.health.HSMHealthCheck;
 		HSMHealthCheck.class, TokenValidationHelper.class, VCSchemaProviderUtil.class, PrivateKeyDecryptorHelper.class, 
 		PasswordAuthServiceImpl.class, PasswordComparator.class, AuthenticationErrorEventingPublisher.class })
 @ComponentScan(basePackages = { "io.mosip.authentication.service.*", "io.mosip.kernel.core.logger.config",
-		"io.mosip.authentication.common.service.config", "${mosip.auth.adapter.impl.basepackage}" }, excludeFilters = @ComponentScan.Filter(type = FilterType.REGEX, pattern = {
+		"io.mosip.authentication.common.service.config" }, excludeFilters = @ComponentScan.Filter(type = FilterType.REGEX, pattern = {
 				"io.mosip.idrepository.core.config.IdRepoDataSourceConfig.*" }))
 @EnableJpaRepositories(basePackages = { "io.mosip.authentication.common.service.repository.*",
 		"io.mosip.kernel.keymanagerservice.repository.*" })

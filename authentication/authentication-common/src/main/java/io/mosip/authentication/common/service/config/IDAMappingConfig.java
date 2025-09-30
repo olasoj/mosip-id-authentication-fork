@@ -19,7 +19,7 @@ import lombok.Data;
  */
 
 @Configuration
-@PropertySource(value = "${ida.mapping.property.source}", factory = IDAMappingFactory.class)
+//@PropertySource(value = "${ida.mapping.property.source}", factory = IDAMappingFactory.class)
 @ConfigurationProperties
 
 /**
