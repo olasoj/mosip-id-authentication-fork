@@ -36,3 +36,29 @@ API documentation is available [here](https://mosip.github.io/documentation/).
 
 ## License
 This project is licensed under the terms of [Mozilla Public License 2.0](LICENSE).
+
+
+Test health endpoint
+
+```bash
+    curl --location 'localhost:8090/idauthentication/v1/health/details'
+    /idauthentication/v1
+```
+
+Test audit endpoint
+
+```bash
+    curl --location 'localhost:8090/idauthentication/v1/audit/log' \
+    --header 'Content-Type: application/json' \
+    --data '{
+        "eventType": "LOGIN",
+        "description": "User attempted login",
+        "userId": "12345"
+    }'
+```
+
+## Tech Stack
+
+**Client:** Curl
+
+**Server:** Java, Spring boot

@@ -18,7 +18,7 @@ import  io.mosip.authentication.core.spi.audit.service.AuditService;
 import  io.mosip.authentication.core.audit.dto.AuditRequest;
 
 @RestController
-@RequestMapping("/api/v1/audit")
+@RequestMapping("/audit")
 @Tag(name = "Audit API", description = "Endpoints for auditing events")
 public class AuditController {
 
