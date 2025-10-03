@@ -1,6 +1,9 @@
 package io.mosip.authentication.service;
 
+import io.mosip.authentication.common.service.impl.audit.AuditServiceImpl;
+import io.mosip.authentication.common.service.impl.health.HealthServiceImpl;
 import io.mosip.authentication.common.service.util.KeyBindedTokenMatcherUtil;
+import io.mosip.authentication.core.health.dto.MosipConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
@@ -126,7 +129,9 @@ import io.mosip.kernel.keymanager.hsm.health.HSMHealthCheck;
 		AuthAnonymousProfileServiceImpl.class, AuthAnonymousEventPublisher.class, SessionKeyDecrytorHelper.class, ExternalRestHelperConfig.class, IdaRequestResponsConsumerUtil.class,
 		PartnerCACertEventServiceImpl.class, PartnerCACertEventInitializer.class, EnvUtil.class, KeyBindedTokenMatcherUtil.class,
 		HSMHealthCheck.class, TokenValidationHelper.class, VCSchemaProviderUtil.class, PrivateKeyDecryptorHelper.class, 
-		PasswordAuthServiceImpl.class, PasswordComparator.class, AuthenticationErrorEventingPublisher.class })
+		PasswordAuthServiceImpl.class, PasswordComparator.class, AuthenticationErrorEventingPublisher.class ,
+		AuditServiceImpl.class, HealthServiceImpl.class, MosipConfig.class
+})
 @ComponentScan(basePackages = { "io.mosip.authentication.service.*", "io.mosip.kernel.core.logger.config",
 		"io.mosip.authentication.common.service.config" }, excludeFilters = @ComponentScan.Filter(type = FilterType.REGEX, pattern = {
 				"io.mosip.idrepository.core.config.IdRepoDataSourceConfig.*" }))
